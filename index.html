@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Sopian</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header Content -->
+    <header class="text-center py-6">
+        <h1 class="font-bold text-3xl">Todo List Website - Sopian</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-xl mx-auto bg-white p-6 rounded shadow">
+
+        <!-- Form Section -->
+        <section>
+            <form class="flex flex-col gap-3">
+                <!-- Todo Input -->
+                <input class="border rounded p-2" type="text" id="todo-input"
+                    placeholder="Enter a new todo item">
+
+                <!-- Date Input -->
+                <input class="border rounded p-2" type="date" id="todo-date">
+            </form>
+
+            <!-- Add Button -->
+            <button onclick="addTodo()"
+                class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                type="button">
+                Add Todo
+            </button>
+        </section>
+
+        <!-- Action Section -->
+        <section class="flex pt-4 justify-between">
+            <!-- Clear All Button -->
+            <button onclick="removeAllTodo()"
+                class="border rounded p-2 bg-red-500 text-white">
+                Clear All Todos
+            </button>
+
+            <!-- Filter Button -->
+            <button onclick="filterTodo()"
+                class="border rounded p-2 bg-blue-500 text-white">
+                Show Today
+            </button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="pt-6">
+            <header>
+                <h1 class="text-2xl font-semibold">List of Todos</h1>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+                <li class="text-gray-500">No todos available</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Content -->
+    <footer class="text-center pt-4 text-sm text-gray-500">
+        © 2026 Sopian's Todo List
+    </footer>
+
+    <!-- JS External -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
